@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class WaterDetector : MonoBehaviour
 {
+    //Using tags and triggers, wue detect if we're in the water or not
     [SerializeField] private PlayerController control;
     private void OnTriggerEnter(Collider other)
     {
