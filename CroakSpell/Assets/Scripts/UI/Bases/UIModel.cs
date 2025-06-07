@@ -5,7 +5,7 @@ public abstract class UIModel : MonoBehaviour
     [Header("REFERENCES")]
     [SerializeField] private BaseView view;
 
-    protected BaseController controller { get; private set; } // Reference to the BaseController associated with this model.
+    protected BaseController controller { get; set; } // Reference to the BaseController associated with this model.
 
     protected virtual void Start() 
     {
