@@ -12,8 +12,10 @@ public class PlayerController : MonoBehaviour
     private Vector2 moveAction;
     private bool jumpAction;
     private bool crouchAction;
+    private bool skill1, skill2, skill3;
     private Vector3 verticalVelocity;
     private bool isInWater;
+
     private void Awake()
     {
         //We conect all the buttons with the parameters
@@ -25,6 +27,12 @@ public class PlayerController : MonoBehaviour
         playerInputsActions.Player.Jump.canceled += ctx => jumpAction = false;
         playerInputsActions.Player.Crouch.started += ctx => crouchAction = true;
         playerInputsActions.Player.Crouch.canceled += ctx => crouchAction = false;
+        playerInputsActions.Player.Skill1.started += ctx => skill1 = true;
+        playerInputsActions.Player.Skill1.canceled += ctx => skill1 = false;
+        playerInputsActions.Player.Skill2.started += ctx => skill2 = true;
+        playerInputsActions.Player.Skill2.canceled += ctx => skill2 = false;
+        playerInputsActions.Player.Skill3.started += ctx => skill3 = true;
+        playerInputsActions.Player.Skill3.canceled += ctx => skill3 = false;
     }
     private void OnEnable()
     {
